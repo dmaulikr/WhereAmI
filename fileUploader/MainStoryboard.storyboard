@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HpB-9Z-T94">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--File Upload Demo View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="fileUploadDemoViewController" sceneMemberID="viewController">
+                    <view key="view" alpha="0.84999999999999998" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fkd-az-rBB">
+                                <rect key="frame" x="185" y="122" width="129" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Where Am I?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadPhoto:" destination="2" eventType="touchUpInside" id="aVI-nN-LC7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DsU-j0-0uy">
+                                <rect key="frame" x="107" y="381" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="H5Y-jK-nq8">
+                                <rect key="frame" x="97" y="371" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alma_Mater.png" id="ar8-17-1Ae">
+                                <rect key="frame" x="-3" y="7" width="327" height="473"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uC8-Gy-02r">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="kp0-6C-KZP"/>
+                        <barButtonItem key="leftBarButtonItem" title="Columbia Wiki" style="done" id="cRV-ZG-Qtw">
+                            <color key="tintColor" red="0.25734793389999999" green="0.4648971126" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="goR-jZ-ydN" kind="push" id="GQr-Tv-fvR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backImage" destination="ar8-17-1Ae" id="FrV-tu-Sub"/>
+                        <outlet property="progressView" destination="H5Y-jK-nq8" id="ouQ-uX-xp3"/>
+                        <outlet property="uploadingLabel" destination="DsU-j0-0uy" id="Ogn-HM-Gmp"/>
+                        <segue destination="AUp-pb-kkM" kind="push" identifier="toGoogleSearch" id="fmf-MS-loq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="188"/>
+        </scene>
+        <!--Building Table View Controller-->
+        <scene sceneID="ykc-RI-42Q">
+            <objects>
+                <viewController id="goR-jZ-ydN" customClass="BuildingTableViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CQ5-z6-1oo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="FhH-cP-Vdq">
+                                <rect key="frame" x="10" y="0.0" width="300" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BuildingCell" id="u3r-zN-CM0">
+                                        <rect key="frame" x="0.0" y="119" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3r-zN-CM0" id="aMs-n9-y60">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1I1-qb-E6v" kind="push" identifier="BuildingWiki" id="7QY-0k-Uom"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="goR-jZ-ydN" id="1Oo-ju-rwn"/>
+                                    <outlet property="delegate" destination="goR-jZ-ydN" id="Drg-td-d94"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I3g-27-cNC"/>
+                    <connections>
+                        <outlet property="tableView" destination="FhH-cP-Vdq" id="VWU-Tv-TQl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77W-hg-aUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="-439"/>
+        </scene>
+        <!--Building Wiki View Controller-->
+        <scene sceneID="XRc-5D-PwI">
+            <objects>
+                <viewController id="1I1-qb-E6v" customClass="BuildingWikiViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q8g-Kw-Fwj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="SC9-PS-10a">
+                                <rect key="frame" x="0.0" y="62" width="320" height="418"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vak-EQ-qNQ">
+                        <barButtonItem key="rightBarButtonItem" image="google-maps-icon.png" id="kYK-Mn-Hkb">
+                            <connections>
+                                <segue destination="5SB-hh-hXc" kind="push" identifier="toMapView" id="Kza-HQ-Ged"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="locationInfo" destination="kYK-Mn-Hkb" id="P6T-FU-QMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMN-Es-hQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="-439"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="75C-Fa-q20">
+            <objects>
+                <viewController id="5SB-hh-hXc" customClass="mapViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFx-45-ESh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" pitchEnabled="NO" showsUserLocation="YES" id="5Oc-Kb-D7i">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a9D-Sd-d3A"/>
+                    <connections>
+                        <outlet property="mapView" destination="5Oc-Kb-D7i" id="mPa-0A-dfd"/>
+                        <outlet property="view" destination="5Oc-Kb-D7i" id="PdF-Kt-EGL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4J-Ga-ZmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="-445"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="sxP-gA-PSa">
+            <objects>
+                <viewController id="Mq2-a1-Dkg" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P47-e7-K3U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="zLF-Wv-0N7">
+                                <rect key="frame" x="-14" y="62" width="334" height="418"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PXd-3k-aOc"/>
+                    <connections>
+                        <outlet property="_webView" destination="zLF-Wv-0N7" id="F3p-Xo-7j8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgU-y6-c10" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kcL-NI-9IP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HpB-9Z-T94" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yYb-DL-BD7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="CaM-y4-8BD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJU-te-ii2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="188"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SVz-zv-ApQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUp-pb-kkM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5ks-BR-M7D"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qV0-e7-siq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mq2-a1-Dkg" kind="relationship" relationship="rootViewController" id="8hE-7U-QTp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9M-Ta-IyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Alma_Mater.png" width="422" height="553"/>
+        <image name="google-maps-icon.png" width="20" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
