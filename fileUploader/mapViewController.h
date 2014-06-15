@@ -2,7 +2,7 @@
 //  mapViewController.h
 //  fileuploader
 //
-//  Created by Arihant Kochhar on 5/10/14.
+//  Created by Vaibhav Malpani on 5/10/14.
 //  Copyright (c) 2014 NA. All rights reserved.
 //
 
